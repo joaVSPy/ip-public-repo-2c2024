@@ -1,0 +1,29 @@
+Trabajo Práctico 
+“Buscador de Rick and Morty”
+Introducción a la Programación
+                                             COM 13
+Integrantes: Fidanza Joaquin / fidanzajoa@gmail.com
+
+                    Cerrudo Nicolas / mrchayan67@gmail.com
+
+
+Introducción: Este trabajo consiste en implementar una aplicación web, que es un buscador de personajes de la serie animada “Rick and Morty”, la cual permite al usuario encontrar imágenes de sus personajes favoritos, sin embargo, este proyecto carece de ciertas funciones indispensables para su funcionamiento.
+el objetivo principal de este trabajo es completar las paginas views, services y home para poder lograr la visualización de las imágenes en cartas, con su informacion y estado(vivo, muerto o desconocido). por otro lado,de manera opcional, realizar ciertos opcionales de los cuales desarrollamos algunos
+
+Desarrollo: Para solucionar el problema principal de la falta de algunas funciones fundamentales, agregamos dichas funciones al código del programa para lograr ejecutarlo correctamente, además del problema principal, solucionamos algunos problemas secundarios, como pueden ser; el estado actual del personaje y su respectivo color, la gestión de la lista de personajes favoritos del usuario y el mal funcionamiento del buscador.
+   Para el desarrollo de este proyecto, trabajamos con tres apartados principales, los cuales contaban con funciones incompletas, no funcionaban, dichos apartados son:
+
+Service: 
+   Por un lado, nos otorgaron, una función llamada “getALLImages” que se encargaba de mostrar las imágenes de los personajes de la serie animada, para el correcto funcionamiento de esta función, primero tuvimos que importar una función de otro archivo, llamada “Transport” e implementarla a la función “getALLImages”, luego agregamos un ciclo el cual se encarga de guardar imágenes dentro de una lista vacía.
+    Por otro lado, nos otorgaron una función llamada “saveFavourite” la cual se encargaba guardar las imágenes de los personajes favoritos del usuario, para su correcto funcionamiento llamamos a una función “translator.fromTemplateIntoCard”, la cual se encarga de mostrar los datos de la carta elegida como favorita, a su vez llamamos a una función nombrada “get_user” la cual se encarga de asignar un usuario a la lista de favoritos; también agregamos una función ya definida “repositories.getAllFavourites(user)” la cual se encarga de devolver la lista de los personajes favoritos del usuario.
+
+View: Nos otorgaron una función definida como “home”, a la cual para completarla le agregamos la función “services.getALLImages”, la cual se encarga de devolver una lista con todas las imágenes de los personajes y además agregamos una función llamada “services.getAllFavourites(request)” la cual devuelve la lista de favoritos del usuario.
+    Además, nos otorgaron una función definida como “search” la cual dentro tenía una condicional vacía, la cual tuvimos que rellenar utilizando la función “services.get.ALLImages”.
+Para el apartado de la gestión de favoritos del usuario (Todos los favoritos, guardar favorito, eliminar favorito).
+    Para la función llamada “deleteFavourite” utilizamos la función “services.deletefavourite”, la cual se encarga de eliminar un favorito de la lista del usuario.
+    Mientras que para las funciones de gestión restantes reutilizamos las funciones anteriormente trabajadas, “services.getALLFavourites” y “services.getALLImages”
+
+Home: Agregamos condiciones a las cartas de los personajes, con el objetivo de mostrar un color relacionado con el estado actual del mismo (Si está vivo que se muestre de color verde, si está muerto de color rojo y si no se cumple ninguna de las anteriores que se muestre de color naranja). Además de agregar bordes a las cartas relacionados con dichas condiciones.
+    También implementamos una imagen de fondo a la pantalla principal, cambiamos el color de la fuente de los textos y cambiamos el color de las cartas.
+
+Conclusión: Entre los integrantes del grupo (2) , concluimos en que algunos puntos a destacar del trabajo son, por un lado, el uso de git para realizar el proyecto de manera cooperativa, ya que esta herramienta facilita mucho la interacción de varios usuarios en un mismo proyecto, por otro lado, otro punto a destacar del trabajo, es la creación e integración de funciones previamente definidas, que permitieron la creación de más funciones y posteriormente la creación de un programa más complejo.
